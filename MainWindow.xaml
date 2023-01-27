@@ -1,0 +1,131 @@
+﻿<Window x:Class="JsonParsing_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="540" Width="960">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.28*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="0.3*"/>
+            <RowDefinition />
+            <RowDefinition  Height="auto"/>
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="5" BorderBrush="Black" BorderThickness="1"></Border>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" FontSize="30" Name="TitleBox" Margin="0,0,0,2"/>
+        <Button Grid.Column="3" Content="Load" HorizontalAlignment="Right" Margin="5,10,5,10" VerticalAlignment="Bottom" Width="100" Click="LoadBtn"/>
+        <Button Grid.Column="4" Content="Clear" HorizontalAlignment="Right" Margin="5,10,5,10" VerticalAlignment="Bottom" Width="100" Click="ClearBtn"/>
+
+
+        <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" Margin="5,5,5,5">Case</TextBlock>
+        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,0,1,0"></Border>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <RadioButton Grid.Column="0" Content="1" Name="CaseNo1" Checked="CaseNoChecked" VerticalAlignment="Center" Margin="20,0,20,0" RenderTransformOrigin="0.5,0.5"  >
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Content="2" Name="CaseNo2" Checked="CaseNoChecked" VerticalAlignment="Center" Margin="20,0,20,0" RenderTransformOrigin="0.5,0.5" Grid.Column="1" >
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Grid.Column="2" Content="3" Name="CaseNo3" Checked="CaseNoChecked" VerticalAlignment="Center" Margin="20,0,20,0" RenderTransformOrigin="0.5,0.5" >
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+            <RadioButton Grid.Column="3" Content="4" Name="CaseNo4" Checked="CaseNoChecked" VerticalAlignment="Center" Margin="20,0,20,0" RenderTransformOrigin="0.5,0.5" >
+                <RadioButton.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </RadioButton.RenderTransform>
+            </RadioButton>
+        </Grid>
+
+        <Border Grid.Row="1" Grid.ColumnSpan="6" BorderBrush="Black" BorderThickness="0,0,0,1"/>
+
+
+        <TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" Margin="5,5,5,5">Date</TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" FontSize="20" Margin="5,5,5,5" Name="DateBox"></TextBlock>
+        <Border Grid.Row="2" Grid.ColumnSpan="6" BorderBrush="Black" BorderThickness="0,0,0,1"/>
+        <Border Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0"></Border>
+
+
+        <TextBlock Grid.Row="3" Grid.Column="0" FontSize="20" Margin="5,5,5,5">Updated</TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" FontSize="20" Margin="5,5,5,5" Name="UpdatedBox"></TextBlock>
+        <Border Grid.Row="3" Grid.ColumnSpan="6" BorderBrush="Black" BorderThickness="0,0,0,1"/>
+        <Border Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="0,0,1,0"></Border>
+
+
+
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" FontSize="18" VerticalAlignment="Bottom" Margin="2,0,2,2" Padding="0,5,0,0">Description</TextBlock>
+        <TextBox Grid.Row="5" Grid.ColumnSpan="5" Margin="2,1,2,1" Text="{Binding Path=Desc}"></TextBox>
+
+
+        <TextBlock Grid.Row="6" Grid.ColumnSpan="2" FontSize="18" VerticalAlignment="Bottom" Margin="2,0,2,2" Padding="0,5,0,0">DailyTemp</TextBlock>
+
+        <Button Grid.Row="6" Grid.Column="3" Content="Add" HorizontalAlignment="Right" Margin="5,10,5,0" VerticalAlignment="Bottom" Width="100" Click="AddBtn"/>
+        <Button Grid.Row="6" Grid.Column="4" Content="Delete" HorizontalAlignment="Right" Margin="5,10,5,0" VerticalAlignment="Bottom" Width="100" Click="DeleteBtn"/>
+
+
+        <ListView Grid.Row="7" Grid.ColumnSpan="5" Name="TempListView" Margin="2,0,2,2" SelectionChanged="lstTemps_SelectionChanged" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date"  DisplayMemberBinding="{Binding Date}" Width="100"/>
+                    <GridViewColumn Header="High"  DisplayMemberBinding="{Binding High}" Width="50"/>
+                    <GridViewColumn Header="Low"  DisplayMemberBinding="{Binding Low}" Width="50"/>
+                    <GridViewColumn Header="Average"  DisplayMemberBinding="{Binding Average}" Width="50"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Grid.Row="8" Grid.Column="3" Content="Save" HorizontalAlignment="Right" Margin="5,10,5,10" VerticalAlignment="Bottom" Width="100" Click="SaveBtn"/>
+        <Button Grid.Row="8" Grid.Column="4" Content="Save as" HorizontalAlignment="Right" Margin="5,10,5,10" VerticalAlignment="Bottom" Width="100" Click="SaveAsBtn"/>
+
+
+
+    </Grid>
+</Window>
