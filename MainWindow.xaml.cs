@@ -84,6 +84,7 @@ namespace JsonParsing_WPF
 
             if (dlgOpenFile.ShowDialog().ToString() == "OK")
             {
+                // 파일 경로에 맞춰 Json deserialize -> JsonExample 클래스
                 string fileName = dlgOpenFile.FileName;
                 filePath = fileName;
                 string text = File.ReadAllText(fileName);
@@ -116,11 +117,12 @@ namespace JsonParsing_WPF
         }
         private void ClearBtn(object sender, RoutedEventArgs e)
         {
-            // 임시로 Show -> Close
+            // 임시로 대충 해놓은 새로고침
             MainWindow newWindow = new MainWindow();
             System.Windows.Application.Current.MainWindow = newWindow;
             newWindow.Show();
             this.Close();
+
         }
         private void SaveBtn(object sender, RoutedEventArgs e)
         {
@@ -186,6 +188,7 @@ namespace JsonParsing_WPF
         {
             if (SelectedNo != -1)
             {
+                // 선택된 TodayTemp 하나 삭제
                 Temp.RemoveAt(SelectedNo);
                 TempListView.Items.Refresh();
             }
