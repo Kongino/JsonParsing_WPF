@@ -1,0 +1,27 @@
+{
+  "Title": "NoLoaded",
+  "CaseNo": 3,
+  "Date": "2023.01.26",
+  "Desc": "Now Loaded",
+  "Updated": "2023.01.26",
+  "Temp": [
+    {
+      "Date": "1",
+      "High": 1,
+      "Low": 1,
+      "Average": 1
+    },
+    {
+      "Date": "3",
+      "High": 3,
+      "Low": 3,
+      "Average": 3
+    },
+    {
+      "Date": "2023.01.26",
+      "High": 1,
+      "Low": 1,
+      "Average": 3
+    }
+  ]
+}

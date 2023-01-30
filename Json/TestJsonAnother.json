@@ -1,0 +1,21 @@
+{
+  "Title": "TestJsonAnother",
+  "CaseNo": 2,
+  "Date": "2023.01.26",
+  "Desc": "TestJson Another",
+  "Updated": "2023.01.26",
+  "Temp": [
+    {
+      "Date": "2023.01.21",
+      "High": 15,
+      "Low": -6,
+      "Average": 0
+    },
+    {
+      "Date": "1",
+      "High": 1,
+      "Low": 1,
+      "Average": 1
+    }
+  ]
+}

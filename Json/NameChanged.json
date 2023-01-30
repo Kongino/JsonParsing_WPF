@@ -1,0 +1,33 @@
+{
+  "Title": "NameChanged",
+  "CaseNo": 4,
+  "Date": "2023.01.19",
+  "Desc": "NameChanged",
+  "Updated": "2023.01.26",
+  "Temp": [
+    {
+      "Date": "2023.01.20",
+      "High": 4,
+      "Low": -6,
+      "Average": -1
+    },
+    {
+      "Date": "2023.01.21",
+      "High": 15,
+      "Low": -6,
+      "Average": 0
+    },
+    {
+      "Date": "2023.01.26",
+      "High": -1,
+      "Low": -50,
+      "Average": -5
+    },
+    {
+      "Date": "13",
+      "High": 13,
+      "Low": 13,
+      "Average": 13
+    }
+  ]
+}

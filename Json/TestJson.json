@@ -1,0 +1,27 @@
+{
+  "Title": "TestJson",
+  "CaseNo": 2,
+  "Date": "2023.01.26",
+  "Desc": "This is JSON file example",
+  "Updated": "2023.01.26",
+  "Temp": [
+    {
+      "Date": "2023.01.20",
+      "High": 4,
+      "Low": -6,
+      "Average": -1
+    },
+    {
+      "Date": "2023.01.21",
+      "High": 15,
+      "Low": -6,
+      "Average": 0
+    },
+    {
+      "Date": "2023.01.26",
+      "High": -5,
+      "Low": -10,
+      "Average": -7
+    }
+  ]
+}
